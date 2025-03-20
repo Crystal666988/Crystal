@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;/*将所有元素水平或垂直居中对齐*/
+            align-items: center;/*垂直方向居中对齐*/
+            min-height: 100vh;/**/
+        }
+        .box {
+            position: relative;
+            display: flex;
+        }
+        .box .item {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: calc(50%-150px);
+            left:calc(50%-100px);
+            opacity: 0;
+            transition: transform 0.25s ease-in-out;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+        }
+        .box .item:nth-child(1){
+            transform: translate3d(-250px,0,0) scale(0.8);
+            opacity: 1;
+            z-index: 1;
+        }
+        .box .item:nth-child(2){
+            transform: translate3d(-150px,0,0) scale(0.9);
+            opacity: 1;
+            z-index: 2;
+        }
+        .box .item:nth-child(3){
+            transform: translate3d(0px,0,0) scale(1.5);
+            opacity: 1;
+            z-index: 3;
+        }
+        .box .item:nth-child(4){
+            transform: translate3d(150px,0,0) scale(0.8);
+            opacity: 1;
+            z-index: 2;
+        }
+        .box .item:nth-child(5){
+            transform: translate3d(250px,0,0) scale(0.8);
+            opacity: 1;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <button><</button>
+    <div class="box">
+
+    </div>
+    <button>></button>
+    <script>
+        let box=document.querySelector('.box')
+        const images=[
+        '1.jpg','2.jpg','3.gif','4.jpg','5.jpg','6.jpg'
+        ]
+        for(let i=0;i<images.length;i++){
+            let img=document.createElement('img')
+            img.className='item'
+            img.src=images[i]
+            box.appendChild(img) 
+        }
+        function next(){
+            let items=document.querySelectorAll('.item')
+            box.append(items[0])
+        }
+        function prev(){
+            let items=document.querySelectorAll('.item')
+            box.prepend(items[items.length-1])
+        }
+        window.addEventListener('wheel',function(event){
+            if(event.deltaY>0){
+                next()
+            }else{
+                prev()
+            }
+        })
+        // 添加自动轮播功能
+        let autoPlayInterval = null;
+        function startAutoPlay() {
+            // 每3秒自动轮播一次
+            autoPlayInterval = setInterval(next, 3000);
+        }
+        function stopAutoPlay() {
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = null;
+            }
+        }
+
+        // 鼠标移入盒子时暂停自动轮播，移出时继续自动轮播
+        box.addEventListener('mouseenter', stopAutoPlay);
+        box.addEventListener('mouseleave', startAutoPlay);
+
+        // 开始自动轮播
+        startAutoPlay();
+    </script>
+</body>
+</html>

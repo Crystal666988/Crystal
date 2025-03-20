@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .box {
+            position: relative;
+            display: flex;
+        }
+        .box .item {
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            top: calc(50%-150px);
+            left:calc(50%-100px);
+            background-color: aqua;
+            transition: 0.25s;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            user-select: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5em;
+            font-family: consolas;
+            font-weight: 800;
+            color: brown;
+            opacity: 0;
+        }
+        .box .item:nth-child(1){
+            transform: translate3d(-250px,0,0) scale(0.8);
+            opacity: 1;
+            z-index: 1;
+            background-color: #ff6464;
+        }
+        .box .item:nth-child(2){
+            transform: translate3d(-250px,0,0) scale(0.8);
+            opacity: 1;
+            z-index: 2;
+            background-color: #ff6464;
+        }
+        .box .item:nth-child(3){
+            transform: translate3d(-150px,0,0) scale(0.9);
+            opacity: 1;
+            z-index: 3;
+            background-color: #64c0ff;
+            font-size: 6em;
+        }
+        .box .item:nth-child(4){
+            transform: translate3d(0px,0,0) scale(1);
+            opacity: 1;
+            z-index: 4;
+            background-color: #fff;
+            color: #333;
+            font-size: 8em;
+        }
+        .box .item:nth-child(5){
+            transform: translate3d(150px,0,0) scale(0.9);
+            opacity: 1;
+            z-index: 3;
+            background-color: #48e365;
+            font-size: 6em;
+        }
+        .box .item:nth-child(6){
+            transform: translate3d(250px,0,0) scale(0.8);
+            opacity: 1;
+            z-index: 2;
+            background-color: #cb4af7;
+        }
+        .box .item:nth-child(7){
+            transform: translate3d(250px,0,0) scale(0.8);
+            opacity: 1;
+            z-index: 1;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        let box=document.querySelector('.box')
+        for(let i=1;i<=50;i++){
+            let div=document.createElement('div')
+            div.className='item'
+            div.textContent=i
+            box.appendChild(div)
+        }
+        function moveNext(){
+            let items=document.querySelectorAll('.item')
+            box.appendChild(items[0])
+        }
+        function movePrev(){
+            let items=document.querySelectorAll('.item')
+            box.prepend(items[items.length-1])
+        }
+        window.addEventListener('wheel',function(event){
+            if(event.deltaY>0){
+                moveNext()
+            }else{
+                movePrev()
+            }
+        })
+        // 添加自动轮播功能
+        let autoPlayInterval = null;
+        function startAutoPlay() {
+            // 每3秒自动轮播一次
+            autoPlayInterval = setInterval(moveNext, 1000);
+        }
+        function stopAutoPlay() {
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = null;
+            }
+        }
+
+        // 鼠标移入盒子时暂停自动轮播，移出时继续自动轮播
+        box.addEventListener('mouseenter', stopAutoPlay);
+        box.addEventListener('mouseleave', startAutoPlay);
+
+        // 开始自动轮播
+        startAutoPlay();
+    </script>
+</body>
+</html>
