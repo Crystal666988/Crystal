@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改进版Canvas</title>
+    <link rel="stylesheet" href="head.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="lunbotu.css">
+    <link rel="stylesheet" href="bottom.css">
+    <style>
+      .to-top {
+            position: fixed;/*采用粘性布局，固定在浏览器页面右下角*/
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+            font-size: 0.2rem;
+            border: none;
+            color: black;
+            border-radius: 0.02rem;
+            background-color: aqua;
+            display: none;/*刚开始时需要隐藏，等到页面下拉300px时display变为可见*/
+        }
+        .to-top.show {
+            display: block;/*让按钮变为可见,不可见你无法点击按钮*/
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="left">
+            <div class="img"><img src="canva.png" alt=""></div>
+            <div class="a">
+                <a href="" style="text-decoration: none;">canva中文官网</a>
+            </div>
+            <div class="b">
+                <span>版块素材</span><span style="rotate: -90deg;">&lt;</span>
+                <div class="d">
+                    我是二级菜单
+                </div>
+            </div>
+            <div class="b1">
+                <span>设计场景</span><span style="rotate: -90deg;">&lt;</span>
+                <div class="d">
+                    我是4级菜单
+                </div>
+            </div>
+            <div class="b2">
+                <span>资源教程</span><span style="rotate: -90deg;">&lt;</span>
+                <div class="d">
+                    我是2级菜单
+                </div>
+            </div>
+            <div class="b3">
+                <span>订阅方案</span><span style="rotate: -90deg;">&lt;</span>
+                <div class="d">
+                    我是3级菜单
+                </div>
+            </div>
+            <div class="c">
+                <a href=""style="text-decoration: none;">可画AI</a>
+            </div>
+            <div class="c">
+                <a href=""style="text-decoration: none;">客户端</a>
+            </div>
+        </div>
+        
+        <div class="right">
+            <img src="2.jpg" alt="">
+            <button>登录</button>
+            <button>注册</button>
+        </div>
+    </div>
+    <div class="body">
+        <h1>今天你想设计什么</h1>
+        <h2>使用Canva可画,轻松创建专业设计,还能将其分享或打印。</h2>
+        <button>开始设计</button>
+    </div>
+    <div class="lunbotu">
+        <div class="images"></div>
+        <button class="prev"><</button>
+        <button class="next">></button>
+    </div>
+    <div class="bottom">
+        <h1>完美适配每位用户</h1>
+        <div class="e">
+            <div class="img">
+                <button>获取canva免费可画版</button>
+            </div>
+            <div class="img2">
+                <button>开始免费试用高级版</button>
+            </div>
+            <div class="img3">
+                <button>开始免费试用团队版</button>
+            </div>
+        </div>
+    </div>
+    <div class="marqeen">
+       <div class="itema item1"></div>
+       <div class="itema item2"></div>
+       <div class="itema item3"></div>
+       <div class="itema item4"></div>
+       <div class="itema item5"></div>
+       <div class="itema item6"></div>
+       <div class="itema item7"></div>
+    </div>
+    <div class="waterfall">
+        <h1>各种模板类型，应有尽有</h1>
+        <h2>你可以自定义商务办公文档，也可以设计一些更私人的内容，例如邀请函。</h2>
+        <div class="img">
+            <img src="1.jpg" alt="">
+            <img src="2.jpg" alt="">
+            <img src="4.jpg" alt="">
+            <img src="7.jpg" alt="">
+            <img src="5.jpg" alt="">
+            <img src="6.jpg" alt="">
+            <img src="a.jpg" alt="">
+            <img src="b.jpg" alt="">
+            <img src="c.jpg" alt="">
+            <img src="d.jpg" alt="">
+            <img src="e.jpg" alt="">
+            <img src="f.jpg" alt="">
+            <img src="1.jpg" alt="">
+            <img src="2.jpg" alt="">
+            <img src="4.jpg" alt="">
+            <img src="7.jpg" alt="">
+            <img src="5.jpg" alt="">
+            <img src="6.jpg" alt="">
+        </div>
+    </div>
+    <button class="to-top" onclick="backToTop()">返回顶部</button>
+</body>
+</html>
+<script src="lunbotu.js"></script>
+<script>
+    //通过检测当前屏幕的宽度来调整fontSize的属性，采用rem的大小来实现不同屏幕的自适应
+    const width=window.innerWidth
+    console.log(width)
+    const height=window.innerHeight
+
+    const designWidth=1000
+
+    const designRem=100
+
+    const widthscale=width/designWidth
+    console.log(widthscale)
+    const fontsize=designRem*widthscale
+    console.log(fontsize)
+    document.documentElement.style.fontSize=fontsize+'px'
+
+
+
+
+    //控制回到顶部按钮的函数，事件为滚动，如果页面下拉到300px,则会添加show属性，让按钮可见，如果不是，则去除该属性
+    window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+            document.querySelector('.to-top').classList.add('show');
+            } else {
+                document.querySelector('.to-top').classList.remove('show');
+            }
+        });
+        function backToTop() {
+            window.scrollTo({
+                top: 0,/*回到浏览器页面，在浏览器顶部,同时在上面的按钮已完成绑定点击事件*/
+                behavior: 'smooth'
+        });}
+</script>

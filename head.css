@@ -1,0 +1,120 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+.head {
+    width: 10rem;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    height: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    /* z-index: 10; */
+    /* background-color: aqua; */
+}
+.left {
+    width: 60%;
+    height: 1rem;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.left .img {
+    width: 13%;
+    height: 1rem;
+    align-items: center;
+    /* background-color: brown; */
+    justify-content: center;
+    display: flex;
+    margin:0 0.01rem;
+}
+.left .img img {
+    width: 100%;
+    height: auto;
+}
+.left .a {
+    width: 20%;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: chartreuse; */
+    font-size: 0.15rem;
+}
+.left .b,.left .b1,.left .b2,.left .b3 {
+    width: 14%;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: chartreuse; */
+    font-size: 0.15rem;
+    
+}
+.left .c {
+    width: 10%;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: chartreuse; */
+    font-size: 0.15rem;
+}
+.left .a:hover,.left .b:hover,.left .c:hover,.b1:hover,.b2:hover,.b3:hover {
+    background-color: darkgrey;
+    color: blueviolet;  
+}
+.d {
+    position: absolute;
+    width: 6rem;
+    height: 2.5rem;
+    background-color: chartreuse;
+    left: 1rem;
+    top: 100%;
+    /* display:none; */
+    opacity: 0;
+    transform: translateY(-0.5rem);
+    transition: all 0.5s ease;
+    will-change: transform,opacity;
+    pointer-events: none;
+}
+.b:hover .d,.b1:hover .d,.b2:hover .d,.b3:hover .d {
+    /* display: block; */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.right {
+    width:20%;
+    height: 1rem;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.right button {
+    width: 0.5rem;
+    border-radius: 0.1rem;
+    height: 0.5rem;
+    font-size: 0.2rem;
+}
+.right img {
+    width: 0.4rem;
+    height: auto;
+    border-radius: 50%;
+}
+@keyframes IMGUP {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+.right button:hover,.right img:hover {
+    animation: IMGUP 0.3s forwards;
+}

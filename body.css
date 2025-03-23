@@ -1,0 +1,68 @@
+.body {
+    margin-top: 1.5rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.body h1 {
+    position: relative;
+    font-size: 0.7rem;
+    animation: color 2s infinite;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.2);
+    padding-bottom: 0.05rem;
+    margin-bottom: 0.4rem;
+}
+.body h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.02rem;
+    background-color: #333;
+    transition: width 2s ease;
+}
+.body h1:hover:after {
+    width: 100%;
+}
+.body h2 {
+    position: relative;
+    font-size: 0.3rem;
+    /* animation: color 2s infinite;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.2);*/
+    padding-bottom: 0.05rem;
+    margin-bottom: 0.4rem;
+}
+@keyframes color {
+   0% {color: red;}
+   20%{color: aqua;}
+   40%{color: rgb(58, 194, 194);}
+   60%{color:chartreuse}
+   80%{color: blue;}
+   100%{color: purple;}
+}/*颜色变化函数*/
+.body button {
+    margin-top: 0.2rem;
+    width: 25%;
+    height: 0.7rem;
+    border: 0;
+    transform: scale(1);
+    transition: transform 2s ease;
+    font-size: 0.5rem;
+    padding: 0 0.1rem;
+    /* z-index: 99; */
+}
+.body button:hover {
+    transform: scale(1.2);
+    animation: ground 2s infinite;
+}
+@keyframes ground {
+   0% {background-color: red;}
+   20%{background-color: aqua;}
+   40%{background-color: azure;}
+   60%{background-color:chartreuse}
+   80%{background-color: blue;}
+   100%{background-color: purple;}
+}/*背景变化函数*/

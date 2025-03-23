@@ -1,0 +1,166 @@
+.bottom {
+    margin-top: 2rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-direction: column;
+   }
+   .bottom h1 {
+    font-size: 0.5rem;
+   }
+   .bottom .e {
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.05rem;
+   }
+   .bottom .e .img,.img2,.img3 {
+    width: 33%;
+    height: 2rem;
+    background-color: blue;
+    position: relative;
+   }
+   .bottom .e .img button {
+    position: absolute;
+    top: 75%;
+    left: 0.35rem;
+    font-size: 0.2rem;
+   }
+   .bottom .e .img2 button,.img3 button {
+    position: absolute;
+    top: 75%;
+    left: 0.4rem;
+    font-size: 0.2rem;
+   }
+   .marqeen {
+    width:10rem;
+    height: 1rem;
+    background-color: aquamarine;
+    margin-top: 0.50rem;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    /* margin-inline: auto; */
+   }
+   .marqeen .itema {
+    width: 20%;
+    height: 1rem;
+    /* background-color: red; */
+    border-radius: 0.06rem;
+    position: absolute;
+    left: 100%;
+    animation-name: scrollLeft;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .marqeen:hover .itema {
+    animation-play-state: paused;
+   }
+   .item1 {
+    background-image: url(1.jpg);
+    animation-delay: 0s;
+   }
+   .item2 {
+    background-image: url(2.jpg);
+    animation-delay: 1.15s;
+   }
+   .item3 {
+    background-image: url(4.jpg);
+    
+    animation-delay: 2.3s;
+   }
+   .item4 {
+    background-image: url(5.jpg);
+    
+    animation-delay: 3.45s;
+   }
+   .item5 {
+    background-image: url(6.jpg);
+   
+    animation-delay: 4.6s;
+   }
+   .item6 {
+    background-image: url(7.jpg);
+    
+    animation-delay:5.75s;
+   }
+   .item7 {
+    background-image: url(a.jpg);
+    animation-delay: 6.9s;
+   }
+   @keyframes scrollLeft {  
+    from {
+        left: 100%;
+        filter: blur(4px); /* 开始时模糊 */
+    }
+    10% {
+        filter: blur(2px); /* 刚进入视图时保持模糊 */
+    }
+    20% {
+        filter: blur(1px); /* 逐渐减少模糊 */
+    }
+    30% {
+        filter: blur(0px);
+    }
+    40% {
+        filter: blur(0px);
+    }
+    50% {
+        filter: blur(0px); /* 完全清晰 */
+    }
+    60% {
+        filter: blur(0px); /* 保持清晰 */
+    }
+    70% {
+        filter: blur(0px);
+    }
+    80% {
+      filter: blur(1px);
+    }
+    90% {
+      filter: blur(2px); /* 逐渐增加模糊 */
+    }
+    to {
+      left: -2rem;
+      filter: blur(4px); /* 结束时模糊 */
+    }
+   }
+   .marqeen img {
+    width: 15%;
+    height: auto;
+   }
+   .waterfall {
+    margin-top: 1rem;
+    width: 10rem;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+   .waterfall h1 {
+    font-size: 0.4rem;
+   }
+   .waterfall h2 {
+    font-size: 0.2rem;
+   }
+   .waterfall .img {
+    display: grid;
+    grid-template-columns: repeat(6,1rem);
+    /* grid-auto-rows: minmax(1rem,auto); */
+    gap: 0.25rem 0.1rem;
+   }
+   .waterfall .img img {
+    width: 100%;
+    height:auto;
+    display:block;
+    transition:transform 0.3s ease;
+   }
+   .waterfall .img img:hover {
+    transform: translateY(-0.1rem);
+   }
