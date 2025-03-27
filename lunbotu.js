@@ -2,7 +2,7 @@ const prev=document.querySelector('.prev')
 const next=document.querySelector('.next')
 const image=document.querySelector('.images')
 const images=[
- '1.jpg','2.jpg','3.gif','4.jpg','5.jpg','6.jpg','7.jpg','a.jpg','b.jpg'
+ '25.png','26.png','27.png','28.png','29.png','30.png','31.png','32.png','33.png','34.png','35.png','36.png'
 ]/*创建图片数组，其中这是轮播图部分的，照片可自己添加*/
 for(let i=0;i<images.length;i++){
  let img=document.createElement('img')/*创建img元素，然后添加这些元素到lunbotu类的子代*/

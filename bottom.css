@@ -1,6 +1,7 @@
 .bottom {
     margin-top: 2rem;
     width: 10rem;
+    /* width: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,7 +9,8 @@
     flex-direction: column;
    }
    .bottom h1 {
-    font-size: 0.5rem;
+    font-size: 0.3rem;
+    margin-bottom: 0.4rem;
    }
    .bottom .e {
     width: 8rem;
@@ -18,117 +20,145 @@
    }
    .bottom .e .img,.img2,.img3 {
     width: 33%;
-    height: 2rem;
+    height: 2.2rem;
     background-color: blue;
     position: relative;
+    border-radius: 0.15rem;
+   }
+   .bottom .e .img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(24.png);
+   }
+   .bottom .e .img2 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(22.png);
+   }
+   .bottom .e .img3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(23.png);
    }
    .bottom .e .img button {
+    width: 85%;
     position: absolute;
     top: 75%;
-    left: 0.35rem;
-    font-size: 0.2rem;
+    height: 17%;
+    left: 0.20rem;
+    font-size: 0.12rem;
+    border-radius: 0.05rem;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bolder;
    }
    .bottom .e .img2 button,.img3 button {
+    border-radius: 0.05rem;
+    width: 85%;
+    height: 17%;
     position: absolute;
     top: 75%;
-    left: 0.4rem;
-    font-size: 0.2rem;
+    left: 0.2rem;
+    font-size: 0.12rem;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    font-weight: bolder;
    }
    .marqeen {
     width:10rem;
     height: 1rem;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     margin-top: 0.50rem;
     display: flex;
     position: relative;
     overflow: hidden;
-    /* margin-inline: auto; */
    }
    .marqeen .itema {
     width: 20%;
     height: 1rem;
-    /* background-color: red; */
-    border-radius: 0.06rem;
+    border-radius: 0.03rem;
     position: absolute;
     left: 100%;
     animation-name: scrollLeft;
-    animation-duration: 7s;
+    animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    margin-right: 0.02rem;
+    background-size: 1.9rem 0.4rem;
    }
    .marqeen:hover .itema {
     animation-play-state: paused;
    }
    .item1 {
-    background-image: url(1.jpg);
+    background-image: url(40.png);
     animation-delay: 0s;
    }
    .item2 {
-    background-image: url(2.jpg);
-    animation-delay: 1.15s;
+    background-image: url(39.png);
+    animation-delay: 2.7s;
    }
    .item3 {
-    background-image: url(4.jpg);
-    
-    animation-delay: 2.3s;
+    background-image: url(canva.png);
+    animation-delay: 5.8s;
    }
    .item4 {
-    background-image: url(5.jpg);
-    
-    animation-delay: 3.45s;
+    background-image: url(38.png);
+    animation-delay: 9.09s;
    }
    .item5 {
-    background-image: url(6.jpg);
-   
-    animation-delay: 4.6s;
+    background-image: url(37.png);
+    animation-delay: 12.03s;
    }
    .item6 {
-    background-image: url(7.jpg);
-    
-    animation-delay:5.75s;
+    background-image: url(45.png);
+    animation-delay:14.80s;
    }
    .item7 {
-    background-image: url(a.jpg);
-    animation-delay: 6.9s;
+    background-image: url(46.png);
+    animation-delay: 17.56s;
    }
    @keyframes scrollLeft {  
     from {
         left: 100%;
-        filter: blur(4px); /* 开始时模糊 */
+        filter: blur(0.01rem); /* 开始时模糊 */
     }
     10% {
-        filter: blur(2px); /* 刚进入视图时保持模糊 */
+        filter: blur(0.01rem); /* 刚进入视图时保持模糊 */
     }
     20% {
-        filter: blur(1px); /* 逐渐减少模糊 */
+        filter: blur(0); /* 逐渐减少模糊 */
     }
     30% {
-        filter: blur(0px);
+        filter: blur(0);
     }
     40% {
-        filter: blur(0px);
+        filter: blur(0);
     }
     50% {
-        filter: blur(0px); /* 完全清晰 */
+        filter: blur(0); /* 完全清晰 */
     }
     60% {
-        filter: blur(0px); /* 保持清晰 */
+        filter: blur(0); /* 保持清晰 */
     }
     70% {
-        filter: blur(0px);
+        filter: blur(0);
     }
     80% {
-      filter: blur(1px);
+      filter: blur(0);
     }
     90% {
-      filter: blur(2px); /* 逐渐增加模糊 */
+      filter: blur(0.01rem); /* 逐渐增加模糊 */
     }
     to {
       left: -2rem;
-      filter: blur(4px); /* 结束时模糊 */
+      filter: blur(0.01rem); /* 结束时模糊 */
     }
    }
    .marqeen img {
@@ -145,14 +175,15 @@
    }
    .waterfall h1 {
     font-size: 0.4rem;
+    margin-bottom: 0.2rem;
    }
    .waterfall h2 {
     font-size: 0.2rem;
+    margin-bottom: 0.2rem;
    }
    .waterfall .img {
     display: grid;
     grid-template-columns: repeat(6,1rem);
-    /* grid-auto-rows: minmax(1rem,auto); */
     gap: 0.25rem 0.1rem;
    }
    .waterfall .img img {
@@ -164,3 +195,146 @@
    .waterfall .img img:hover {
     transform: translateY(-0.1rem);
    }
+
+
+   .to-top {
+    z-index: 99;
+    position: fixed;/*采用粘性布局，固定在浏览器页面右下角*/
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    font-size: 0.2rem;
+    border: none;
+    color: black;
+    border-radius: 0.1rem;
+    background-color: rgba(20, 30, 40, 0.5);
+    display: none;/*刚开始时需要隐藏，等到页面下拉300px时display变为可见*/
+}
+.to-top.show {
+    display: block;/*让按钮变为可见,不可见你无法点击按钮*/
+}
+
+
+.move {
+    margin-top: 0.5rem;
+    width: 10rem;
+    height: 3rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .item99 {
+    width: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 0.25rem;
+  }
+  .item99 img {
+    width: 1.5rem;
+    height: auto;
+    border-radius: 0.1rem;
+  }
+  .item99 img:hover {
+    animation: IMGUP 0.3s forwards ease;
+  }
+@keyframes IMGUP {
+    from {
+    transform: scale(1);
+    }
+    to {
+    transform: scale(1.2);
+    }
+}
+  .left99 {
+    position: absolute;
+    top: 45%;
+    left: 0.1rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    font-size: 0.2rem;
+    border-radius: 100%;
+    z-index: 30;
+  }
+  .right99 {
+    position: absolute;
+    top: 45%;
+    right: 0.15rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    font-size: 0.2rem;
+    border-radius: 100%;
+    z-index: 30;
+  }
+  .hidden {
+    display: none;
+  }
+
+
+
+
+  .bottom2 {
+    width: 10rem;
+    margin-top: 0.5rem;
+    display: flex;
+    height: 2rem;
+    background-color: white;  
+  }
+  .bottom2 .item2 ul {
+    list-style: none;
+    background-color: white;
+    height: 2rem;
+  }
+  .bottom2 .item2 ul li {
+    margin-top: 0.05rem;
+  }
+  .bottom2 .item2 ul li a {
+    color: rgba(30, 30, 40, 0.8);
+    text-decoration: none;
+  }
+  .bottom2 .item2 ul li:hover a {
+    text-decoration: underline;
+  }
+  .bottom3 {
+    margin-top: 1rem;
+    width: 10rem;
+    height: 1rem;
+    border-top: 0.02rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 34;
+  }
+  .bottom3 .item55 {
+    width: 30%;
+    height: 50%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+  }
+  .bottom3 .item55 p{
+    font-size: 0.13rem;
+  }
+  .bottom3 .item55 a {
+    font-size: 0.12rem;
+    text-decoration: none;
+    color: black;
+  }
+  .bottom3 .item55 a:hover {
+    text-decoration: underline;
+  }
+  .bottom3 .item55 img {
+    width: 1rem;
+    height: auto;
+    position: absolute;
+    right: 0;
+  }
+  .bottom3 .item55 select {
+    font-size: 0.14rem;
+  }

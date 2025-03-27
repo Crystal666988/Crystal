@@ -1,5 +1,5 @@
 .body {
-    margin-top: 1.5rem;
+    margin-top: 0.8rem;
     width: 10rem;
     display: flex;
     flex-direction: column;
@@ -8,11 +8,12 @@
 }
 .body h1 {
     position: relative;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     animation: color 2s infinite;
     box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.2);
     padding-bottom: 0.05rem;
     margin-bottom: 0.4rem;
+    font-weight: 500;
 }
 .body h1::after {
     content: '';
@@ -29,11 +30,13 @@
 }
 .body h2 {
     position: relative;
-    font-size: 0.3rem;
+    font-size: 0.25rem;
     /* animation: color 2s infinite;
     box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.2);*/
     padding-bottom: 0.05rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.25rem;
+    font-weight: lighter;
+    color: rgba(20, 30, 40,0.7);
 }
 @keyframes color {
    0% {color: red;}
@@ -49,20 +52,60 @@
     height: 0.7rem;
     border: 0;
     transform: scale(1);
-    transition: transform 2s ease;
     font-size: 0.5rem;
-    padding: 0 0.1rem;
-    /* z-index: 99; */
+    padding: 0.2rem 0.4rem;  
+    align-items: center;
+    display: flex;
+    /* background-color: #182848; */
+    border-radius: 0.1rem;
 }
-.body button:hover {
-    transform: scale(1.2);
-    animation: ground 2s infinite;
+.body button a {
+    text-decoration: none;
+    font-size: 0.2rem;
+    background: linear-gradient(-45deg,#ff00c1,#00fff9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}/*控制字体的渐变颜色*/
+.body button::after,.body button::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(
+        var(--rotate),
+        #ff00c1 0%,
+        #9600ff 25%,
+        #4900ff 50%,
+        #00b8ff 80%,
+        #00fff9 100%
+    );
+    width: 100%;
+    height: 110%;
+    left: -.5%;
+    top: -5%;
+    border-radius: 0.1rem;
+    z-index: -2;
+    transition: --rotate 9999s linear;
 }
-@keyframes ground {
-   0% {background-color: red;}
-   20%{background-color: aqua;}
-   40%{background-color: azure;}
-   60%{background-color:chartreuse}
-   80%{background-color: blue;}
-   100%{background-color: purple;}
-}/*背景变化函数*/
+.body button:hover::after,.body button:hover::before {
+    --rotate:3600deg;
+    transition: --rotate 20s linear;
+}
+.body button:hover::before {
+    animation: fade 1.2s infinite;
+}
+@property --rotate {
+    syntax:"<angle>";
+    initial-value:130deg;
+    inherits: false;
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0.01rem);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+        filter: blur(0.01rem);
+    }
+}

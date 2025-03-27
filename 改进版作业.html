@@ -3,58 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>改进版Canvas</title>
+    <link rel="icon" href="favicon.ico">
+    <title>Canva:人人都能使用的视觉办公套件</title>
     <link rel="stylesheet" href="head.css">
     <link rel="stylesheet" href="body.css">
     <link rel="stylesheet" href="lunbotu.css">
     <link rel="stylesheet" href="bottom.css">
     <style>
-      .to-top {
-            position: fixed;/*采用粘性布局，固定在浏览器页面右下角*/
-            right: 0;
-            bottom: 0;
-            cursor: pointer;
-            font-size: 0.2rem;
-            border: none;
-            color: black;
-            border-radius: 0.02rem;
-            background-color: aqua;
-            display: none;/*刚开始时需要隐藏，等到页面下拉300px时display变为可见*/
-        }
-        .to-top.show {
-            display: block;/*让按钮变为可见,不可见你无法点击按钮*/
-        }
+    
     </style>
 </head>
 <body>
+    <button class="to-top" onclick="backToTop()">返回顶部</button>
     <div class="head">
         <div class="left">
+            <!--img类为浏览器顶部的logo部分-->
             <div class="img"><img src="canva.png" alt=""></div>
             <div class="a">
                 <a href="" style="text-decoration: none;">canva中文官网</a>
             </div>
             <div class="b">
-                <span>版块素材</span><span style="rotate: -90deg;">&lt;</span>
+                <span>模板素材</span><span style="rotate: -90deg;">&lt;</span>
                 <div class="d">
-                    我是二级菜单
+                    <div class="left">
+                        <img src="12.webp" alt="">
+                        <a href="">模板中心</a>
+                        <h2>10万+模板素材，覆盖各种设计场景</h2>
+                    </div>
+                    <div class="right11">
+                        <div class="item11">
+                            <div class="icon">
+                                <img src="13.webp" alt="">
+                            </div>
+                            <div class="word">
+                                <a href="">设计素材</a>
+                                <p>数百万高质量版权素材及原创动画，装点你的精美设计</p>
+                            </div>
+                        </div>
+                        <div class="item11">
+                            <div class="icon">
+                                <img src="14.webp" alt="">
+                            </div>
+                            <div class="word">
+                                <a href="">版权图库</a>
+                                <p>数千万张精美照片，装点你的精美设计</p>
+                            </div>
+                        </div>
+                        <div class="item11">
+                            <div class="icon">
+                                <img src="15.webp" alt="">
+                            </div>
+                            <div class="word">
+                                <a href="">字体库</a>
+                                <p>摆脱版权桎梏，轻松，高效的完成设计要求</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="b1">
                 <span>设计场景</span><span style="rotate: -90deg;">&lt;</span>
-                <div class="d">
-                    我是4级菜单
+                <div class="d1">
+                    <div class="left12">
+                       <div class="item22">
+                        <ul>
+                            <li>在线设计<span>></span></li>
+                            <li><a href="">海报设计</a></li>
+                            <li><a href="">Logo设计</a></li>
+                            <li><a href="">简历设计</a></li>
+                            <li><a href="">PPT设计</a></li>
+                            <li><a href="">Banner设计</a></li>
+                            <li><a href="">手抄报设计</a></li>
+                            <li><a href="">网站设计</a></li>
+                            <li><a href="">头像设计</a></li>
+                            <li><a href="">查看全部<span>></span></a></li>
+                        </ul>
+                       </div>
+                       <div class="item22">
+                        <ul>
+                            <li>印刷物料</li>
+                            <li><a href="">名片</a></li>
+                            <li><a href="">书籍封面</a></li>
+                            <li><a href="">贺卡</a></li>
+                            <li><a href="">菜单</a></li>
+                            <li><a href="">宣传单</a></li>
+                            <li><a href="">会员卡</a></li>
+                            <li><a href="">证书</a></li>
+                            <li style="font-size: 0.11rem;"><a href="">日历</a></li>
+                        </ul>
+                       </div>
+                       <div class="item22">
+                        <ul>
+                            <li>行业资源<span>></span></li>
+                            <li><a href="">餐饮</a></li>
+                            <li><a href="">教育</a></li>
+                            <li><a href="">婚庆</a></li>
+                            <li><a href="">电商</a></li>
+                            <li><a href="">新媒体</a></li>
+                            <li><a href="">人力资源</a></li>
+                            <li><a href="">政府政务</a></li>
+                            <li style="font-size: 0.11rem;color: rgba(20, 30, 40,0.5);"><a href="">跨境电商</a></li>
+                        </ul>
+                       </div>
+                    </div>
+                    <div class="right12">
+                        <div class="item12">
+                            <div class="icon">
+                                <img src="16.webp" alt="">
+                            </div>
+                            <div class="word">
+                                <a href="">视觉办公套件</a>
+                                <p>重新构想你的工作方式，满足你对视觉传达的所有要求</p>
+                            </div>
+                        </div>
+                        <div class="item12">
+                            <div class="icon">
+                                <img src="17.webp" alt="">
+                            </div>
+                            <div class="word">
+                                <a href="">行业解决方案</a>
+                                <p>为中小企业提供集设计，管理，协作于一体的一站式设计解决方案</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="b2">
                 <span>资源教程</span><span style="rotate: -90deg;">&lt;</span>
-                <div class="d">
-                    我是2级菜单
+                <div class="d1">
+                    <div class="left12">
+                        <div class="item22">
+                         <ul>
+                             <li>热门功能</li>
+                             <li><a href="">在线抠图</a></li>
+                             <li><a href="">在线拼图</a></li>
+                             <li><a href="">图片编辑</a></li>
+                             <li><a href="">视频剪辑</a></li>
+                             <li><a href="">在线翻译</a></li>
+                             <li><a href="" style="font-size: 0.11rem;">证件照制作</a></li>
+                         </ul>
+                        </div>
+                        <div class="item22">
+                         <ul>
+                             <li>协作办公<span>></span></li>
+                             <li><a href="">在线文档</a></li>
+                             <li><a href="">演示文稿制作</a></li>
+                             <li><a href="">图表制作</a></li>
+                             <li><a href="">在线白板</a></li>
+                             <li><a href="">画图工具</a></li>
+                             <li><a href="">网站制作</a></li>
+                             <li style="font-size: 0.11rem;"><a href="">PDF编译器</a></li>
+                         </ul>
+                        </div>
+                        <div class="item22">
+                         <ul>
+                             <li>设计资源<span>></span></li>
+                             <li><a href="">二维码生成器</a></li>
+                             <li><a href="">颜色工具</a></li>
+                             <li><a href="">常用设计尺寸</a></li>
+                             <li style="font-size: 0.11rem;"><a href="">API</a></li>
+                         </ul>
+                        </div>
+                     </div>
+                     <div class="right12">
+                         <div class="item12">
+                             <div class="icon">
+                                 <img src="18.webp" alt="">
+                             </div>
+                             <div class="word">
+                                 <a href="">使用教程</a>
+                                 <p>详尽的设计教程，为你保驾护航</p>
+                             </div>
+                         </div>
+                         <div class="item12">
+                             <div class="icon">
+                                 <img src="19.webp" alt="">
+                             </div>
+                             <div class="word">
+                                 <a href="">设计学院</a>
+                                 <p>看点好玩的设计资讯，也学点有用的设计技巧</p>
+                             </div>
+                         </div>
+                         <div class="item12">
+                            <div class="icon">
+                                <img src="20.webp" alt="">
+                            </div>
+                            <div class="word">
+                                <a href="">创作者计划</a>
+                                <p>加入canva,获取源源不断的收入</p>
+                            </div>
+                        </div>
+                     </div>
                 </div>
             </div>
             <div class="b3">
                 <span>订阅方案</span><span style="rotate: -90deg;">&lt;</span>
-                <div class="d">
-                    我是3级菜单
+                <div class="d2">
+                    <div class="left13">
+                        <div class="item18">
+                            <img src="21.webp" alt="">
+                            <a href="">免费版<span>></span></a>
+                            <p>适合每个人，或者与别人共同设计</p>
+                        </div>
+                        <div class="item18">
+                            <img src="22.webp" alt="">
+                            <a href="">高级版<span>></span></a>
+                            <p>适合个人创作者、个体商家和自由设计师，可以无限量使用全部高级版内容，轻松高效创作专业水准的设计。</p>
+                        </div>
+                        <div class="item18">
+                            <img src="23.webp" alt="">
+                            <a href="">团队版<span>></span></a>
+                            <p>适合任何规模的团队，通过一站式视觉传播解决方案，轻松输出符合品牌调性的视觉内容。</p>
+                        </div>
+                        <div class="item18">
+                            <img src="24.webp" alt="">
+                            <a href="">企业服务<span>></span></a>
+                            <p>适合所有企业客户，提供优质完善的客户成功和定制设计服务。</p>
+                        </div>
+                        <div class="item19">
+                            <a href="">查看不同方案的价格对比</a>
+                        </div>
+                    </div>
+                    <div class="right13">
+                        <div class="item13">
+                            <div class="icon">
+                                <img src="25.webp" alt="">
+                            </div>
+                            <div class="word">
+                                <a href="">跨境电商</a>
+                                <p>一站式创作和协作体验，轻松输出和管理跨境电商行业的视觉内容。</p>
+                            </div>
+                        </div>
+                        <div class="item13">
+                            <div class="icon">
+                                <img src="26.webp" alt="">
+                            </div>
+                            <div class="word">
+                                <a href="">公益会员</a>
+                                <p>面向在华非营利组织，提供 0 成本、简单、高效的一站式设计解决方案。</p>
+                            </div>
+                        </div>
+                        <div class="item13">
+                            <div class="icon">
+                                <img src="27.webp" alt="">
+                            </div>
+                            <div class="word">
+                                <a href="">跨境电商</a>
+                                <p>专为教学场景打造的，在线教学可视化素材平台与课堂创意协作工具。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="c">
@@ -68,13 +266,13 @@
         <div class="right">
             <img src="2.jpg" alt="">
             <button>登录</button>
-            <button>注册</button>
+            <button style="background-color: blueviolet;color: white;">注册</button>
         </div>
     </div>
     <div class="body">
         <h1>今天你想设计什么</h1>
         <h2>使用Canva可画,轻松创建专业设计,还能将其分享或打印。</h2>
-        <button>开始设计</button>
+        <button><a href="">开始设计</a></button>
     </div>
     <div class="lunbotu">
         <div class="images"></div>
@@ -94,6 +292,7 @@
                 <button>开始免费试用团队版</button>
             </div>
         </div>
+        <h1 style="font-size: 0.12rem;margin-top: 0.25rem;">我们的定价页面展示了所有详细信息。教育组织和非营利机构可以免费享用Canva可画的付费功能。</h1>
     </div>
     <div class="marqeen">
        <div class="itema item1"></div>
@@ -106,29 +305,145 @@
     </div>
     <div class="waterfall">
         <h1>各种模板类型，应有尽有</h1>
-        <h2>你可以自定义商务办公文档，也可以设计一些更私人的内容，例如邀请函。</h2>
+        <h2>你可以自定义商务办公文档，也可以设计一些更私人的内容，例如邀请函</h2>
         <div class="img">
-            <img src="1.jpg" alt="">
-            <img src="2.jpg" alt="">
-            <img src="4.jpg" alt="">
-            <img src="7.jpg" alt="">
-            <img src="5.jpg" alt="">
-            <img src="6.jpg" alt="">
-            <img src="a.jpg" alt="">
-            <img src="b.jpg" alt="">
-            <img src="c.jpg" alt="">
-            <img src="d.jpg" alt="">
-            <img src="e.jpg" alt="">
-            <img src="f.jpg" alt="">
-            <img src="1.jpg" alt="">
-            <img src="2.jpg" alt="">
-            <img src="4.jpg" alt="">
-            <img src="7.jpg" alt="">
-            <img src="5.jpg" alt="">
-            <img src="6.jpg" alt="">
+            <img src="25.png" alt="">
+            <img src="26.png" alt="">
+            <img src="27.png" alt="">
+            <img src="28.png" alt="">
+            <img src="29.png" alt="">
+            <img src="30.png" alt="">
+            <img src="31.png" alt="">
+            <img src="32.png" alt="">
+            <img src="33.png" alt="">
+            <img src="34.png" alt="">
+            <img src="35.png" alt="">
+            <img src="36.png" alt="">
+            <img src="37.png" alt="">
+            <img src="38.png" alt="">
+            <img src="23.png" alt="">
+            <img src="12.webp" alt="">
+            <img src="13.webp" alt="">
+            <img src="14.webp" alt="">
         </div>
     </div>
-    <button class="to-top" onclick="backToTop()">返回顶部</button>
+    <div class="move">
+        <button class="left99 hidden"><</button>
+        <div class="item99">
+            <img src="28.png" alt="">
+        </div>
+        <div class="item99">
+            <img src="29.png" alt="">
+        </div>
+        <div class="item99">
+            <img src="30.png" alt="">
+        </div>
+        <div class="item99">
+            <img src="31.png" alt="">
+        </div>
+        <div class="item99">
+            <img src="32.png" alt="">
+        </div>
+        <div class="item99">
+            <img src="33.png" alt="">
+        </div>
+        <div class="item99">
+            <img src="34.png" alt="">
+        </div>
+        <div class="item99">
+            <img src="35.png" alt="">
+        </div>
+        <div class="item99">
+            <img src="36.png" alt="">
+        </div>
+        <button class="right99">></button>
+    </div>
+    <div class="bottom2">
+        <div class="item2">
+            <ul>
+                <li style="font-size: 0.16rem;font-weight: bold;"><a href="" style="color: black;">更多功能</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">弯曲文字生成器</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">图片特效</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">图片强化工具</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">为照片添加相框特效</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">为图片添加文字</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">在线视频录制工具</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">视频编辑器</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">将视频转成mp4格式</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">查看更多功能</a></li>
+            </ul>
+        </div>
+        <div class="item2">
+            <ul>
+                <li style="font-size: 0.16rem;font-weight: bold;"><a href="" style="color: black;">探索</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">设计灵感</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">定制印刷</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">字体搭配</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">颜色</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">色轮</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">调色板生成器</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">博客</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">应用</a></li>
+            </ul>
+        </div>
+        <div class="item2">
+            <ul>
+                <li style="font-size: 0.16rem;font-weight: bold;"><a href="" style="color: black;">社区</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">在线社区</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">创作者</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">Canvas基金</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">开发者</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">合作伙伴</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">联盟项目</a></li>
+            </ul>
+        </div>
+        <div class="item2">
+            <ul>
+                <li style="font-size: 0.16rem;font-weight: bold;"><a href="" style="color: black;">下载</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">ios版</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">安卓版</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">WINDOWS版</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">Mac版</a></li>
+            </ul>
+        </div>
+        <div class="item2">
+            <ul>
+                <li style="font-size: 0.16rem;font-weight: bold;"><a href="" style="color: black;">公司信息</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">关于Canva</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">新闻室</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">诚聘英才</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">第二步</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">可持续发展</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">信任中心</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">安全和合规</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">用户协议和隐私条款</a></li>
+                <li style="font-size: 0.12rem;font-weight: lighter;"><a href="">预约演示</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom3">
+        <div class="item55">
+            <select name="" id="">
+                <option value="">简体中文(中国大陆)</option>
+                <option value="zh-TW">繁体中文 (中国台湾)</option>
+                <option value="en-US">English (United States)</option>
+                <option value="fr-FR">Français (France)</option>
+                <option value="de-DE">Deutsch (Deutschland)</option>
+                <option value="es-ES">Español (España)</option>
+                <option value="ja-JP">日本語 (日本)</option>
+                <option value="ru-RU">Русский (Россия)</option>
+                <option value="pt-BR">Português (Brasil)</option>
+                <option value="it-IT">Italiano (Italia)</option>
+            </select>
+        </div>
+        <div class="item55">
+            <p>2025 保留所有权利, Canva</p>
+            <a href="">隐私政策 | 条款</a>
+        </div>
+        <div class="item55">
+            <img src="47.png" alt="">
+        </div>
+    </div> 
 </body>
 </html>
 <script src="lunbotu.js"></script>
@@ -136,20 +451,13 @@
     //通过检测当前屏幕的宽度来调整fontSize的属性，采用rem的大小来实现不同屏幕的自适应
     const width=window.innerWidth
     console.log(width)
-    const height=window.innerHeight
-
     const designWidth=1000
-
     const designRem=100
-
     const widthscale=width/designWidth
     console.log(widthscale)
     const fontsize=designRem*widthscale
     console.log(fontsize)
     document.documentElement.style.fontSize=fontsize+'px'
-
-
-
 
     //控制回到顶部按钮的函数，事件为滚动，如果页面下拉到300px,则会添加show属性，让按钮可见，如果不是，则去除该属性
     window.addEventListener('scroll', function() {
@@ -164,4 +472,45 @@
                 top: 0,/*回到浏览器页面，在浏览器顶部,同时在上面的按钮已完成绑定点击事件*/
                 behavior: 'smooth'
         });}
+</script>
+<script>
+    const left99=document.querySelector('.left99')
+    const right99=document.querySelector('.right99')
+    const item99=document.querySelectorAll('.item99')
+    const step=8
+    // 向左移动按钮事件
+    left99.addEventListener('click',function() {
+        moveItem(step); // 负数表示向左
+        this.classList.add('hidden')
+        right99.classList.remove('hidden')
+    });
+    // 向右移动按钮事件
+    right99.addEventListener('click', function(){
+        moveItem(-step); // 正数表示向右
+        this.classList.add('hidden')
+        left99.classList.remove('hidden')
+    });
+    function moveItem(offset) {
+        item99.forEach(item => {
+            item.style.transition = 'transform 0.3s ease';
+            const current = getTranslateX(item); // 获取当前的translateX值（单位：rem）
+            const newPosition = current + offset;
+            item.style.transform = `translateX(${newPosition}rem)`; // 设置新的translateX值，单位为rem
+        });
+    }
+
+// 获取当前translateX值（单位：rem）
+function getTranslateX(element) {
+    const style = window.getComputedStyle(element);
+    const transform = style.transform || style.webkitTransform; // 获取transform属性值
+    
+    // 解析translateX的值
+    const matrix = new DOMMatrix(transform);
+    const translateX = matrix.m41; // 获取translateX的值（单位：px）
+    
+    // 将px转换为rem
+    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const translateXRem = translateX / rootFontSize;  
+    return translateXRem;
+}
 </script>

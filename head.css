@@ -1,33 +1,30 @@
 * {
     margin: 0 auto;
     padding: 0;
+    /*改变浏览器默认样式，令网页居于浏览器的中间位置*/
 }
+/*head类为浏览器的顶部样式*/
 .head {
-    width: 10rem;
-    /* position: fixed;
-    top: 0;
-    left: 0; */
-    height: 1rem;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
-    /* z-index: 10; */
-    /* background-color: aqua; */
+    width: 10rem;/*宽度为10rem,根据原设计稿为1rem=100px来进行设计*/
+    height: 0.4rem;
+    display: flex;/*flex布局，将left类和right类水平布局*/
+    justify-content: space-between;/*将两类分别排到两边来进行布局，每个类离head类的左右边界的距离相同*/
+    border-bottom: 1px solid wheat;/*浏览器的底部边界*/
+    z-index: 10;/*z-index的数值越大，展示顺序越靠前*/
+    background-color: white;/*背景颜色:白色*/
 }
 .left {
-    width: 60%;
-    height: 1rem;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    position: relative;
+    width: 70%;/*占据head类80%的位置*/
+    height: 0.4rem;
+    display: flex;/*水平布局*/
+    align-items: center;/*垂直居中布置子类元素*/
+    position: relative;/*相对位置，定位二级菜单页面*/
 }
 
 .left .img {
-    width: 13%;
-    height: 1rem;
+    width: 16%;
+    height: 0.4rem;
     align-items: center;
-    /* background-color: brown; */
     justify-content: center;
     display: flex;
     margin:0 0.01rem;
@@ -37,76 +34,315 @@
     height: auto;
 }
 .left .a {
-    width: 20%;
-    height: 1rem;
+    width: 16%;
+    height: 0.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     /* background-color: chartreuse; */
-    font-size: 0.15rem;
+    font-size: 0.12rem;
 }
 .left .b,.left .b1,.left .b2,.left .b3 {
-    width: 14%;
-    height: 1rem;
+    width: 12%;
+    height: 0.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     /* background-color: chartreuse; */
-    font-size: 0.15rem;
-    
+    font-size: 0.12rem;  
 }
 .left .c {
     width: 10%;
-    height: 1rem;
+    height: 0.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     /* background-color: chartreuse; */
-    font-size: 0.15rem;
+    font-size: 0.12rem;
 }
 .left .a:hover,.left .b:hover,.left .c:hover,.b1:hover,.b2:hover,.b3:hover {
     background-color: darkgrey;
     color: blueviolet;  
 }
-.d {
-    position: absolute;
-    width: 6rem;
-    height: 2.5rem;
-    background-color: chartreuse;
-    left: 1rem;
-    top: 100%;
-    /* display:none; */
-    opacity: 0;
-    transform: translateY(-0.5rem);
-    transition: all 0.5s ease;
-    will-change: transform,opacity;
-    pointer-events: none;
-}
-.b:hover .d,.b1:hover .d,.b2:hover .d,.b3:hover .d {
-    /* display: block; */
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
 .right {
     width:20%;
-    height: 1rem;
-    /* background-color: red; */
+    height: 0.4rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 .right button {
-    width: 0.5rem;
+    width: 0.6rem;
     border-radius: 0.1rem;
-    height: 0.5rem;
-    font-size: 0.2rem;
+    height: 0.3rem;
+    font-size: 0.12rem;
+    color: blue;
+    font-weight: bold;
 }
 .right img {
-    width: 0.4rem;
+    width: 0.3rem;
     height: auto;
-    border-radius: 50%;
+    border-radius: 20%;
 }
+.b:hover .d,.b1:hover .d1,.b2:hover .d1,.b3:hover .d2 {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+/*上面部分为处理浏览器顶部的部分*/
+
+
+
+.d1 .left12 {
+    width: 2.8rem;
+    display: flex;
+    justify-content:center;
+    font-size: 0.16rem;
+    height: 100%;
+    display: flex;  
+}
+.d1 .left12 .item22 ul {
+    list-style: none;
+    font-size: 0.11rem;
+    
+}
+.d1 .left12 .item22 li {
+    margin-top: 0.08rem;
+    color: rgba(20, 30, 40,0.5);
+}
+.d1 .left12 .item22 li a {   
+    text-decoration: none;
+    color: black;
+}
+.d1 .left12 .item22 li:first-child,li:last-child {
+    font-size: 0.14rem;
+    font-weight: bold;
+    color: black;
+}
+.d1 .left12 .item22 li:hover {
+    background-color: grey;
+}
+.d1 .left12 .item22 li:hover a {
+    text-decoration: underline;
+}
+
+.d2 {
+    overflow: scroll;
+    overflow-y: auto;
+    z-index: 90;
+}
+.d2 .left13 {
+    width: 8rem;
+    height: 100%;
+    display: flex;
+    border-bottom: 0.01rem solid black;
+    border-right: 0.01rem solid black;
+}
+.d2 .left13 .item18 {
+    margin-top: 0.1rem;
+    width: 1.5rem;
+    margin-right: 0.1rem;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;  
+}
+.d2 .left13 .item18 img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.04rem;
+    
+    transition: transform 0.3s linear;
+}
+.d2 .left13 .item18 img:hover {
+    transform: scale(1.1);
+}
+.d2 .left13 .item18 a {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 0.16rem;
+    color: black;
+    text-decoration: none;
+}
+.d2 .left13 .item18 a:hover {
+    text-decoration: underline;
+}
+.d2 .left13 .item18 p {
+    position: absolute;
+    left: 0;
+    top: 60%;
+    font-size: 0.12rem;
+    color: rgba(20, 30, 40,0.5);
+}
+.d2 .left13 .item19 {
+    position: absolute;
+    top: 90%;
+}
+.d2 .left13 .item19 a {
+    font-size: 0.13rem;
+    color: rgb(20, 30, 40);
+}
+.d2 .right13 {
+    width: 4rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.d2 .right13 .item13 {
+    display: flex;
+    width: 2.5rem;
+    height: 30%;
+    margin-top: 3%;
+    position: relative;
+}
+.d2 .right13 .item13 .icon {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.d2 .right13 .item13 a {
+    text-decoration: none;
+    font-size: 0.16rem;
+    position: absolute;
+    text-decoration: none;
+    top: 2%;
+    left: 45%;
+    color: black;
+}
+.d2 .right13 .item13 a:hover {
+    text-decoration: underline;
+}
+.d2 .right13 .item13 p {
+    font-size: 0.11rem;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    color: rgba(20, 30, 40,0.5);
+}
+.d2 .right13 .item13 img {
+    width: 0.6rem;
+    height: auto;
+}
+
+
+/*这是第一个二级菜单的部分*/
+/*d为第一个二级菜单部分，d1为第二个二级菜单部分,d2为第三个二级菜单部分*/
+.d,.d1,.d2 {
+    border: 0.01rem solid black;/*每个菜单有个0.01rem,实线的黑色边框*/
+    position: absolute;/*绝对定位，以left为父类进行定位*/
+    width: 6rem;
+    height: 3rem;
+    background-color: white;
+    left: 1rem;
+    top: 100%;/*定位在了left类的底部位置，往左1rem的位置*/
+    opacity: 0;/*以透明度为变化来进行显示和隐藏二级菜单的动画过渡*/
+    transform: translateY(-0.5rem);/*从二级菜单的上面0.5rem的位置进行下拉*/
+    transition: all 0.5s ease;
+    will-change: transform,opacity;
+    pointer-events: none;/*提高二级菜单的显示性能，避免鼠标的移动过快导致二级菜单频繁出现*/
+    display: flex;
+    z-index: 90;
+    border-radius: 0.1rem;/*让二级菜单出现圆角*/
+}
+.d .left {
+    width: 2.8rem;/*左边部分为2.8rem*/
+    height: 100%;/*高度100%*/
+    font-size: 0.12rem;
+    display: flex;
+    flex-direction: column;/*flex布局，方向垂直向下*/
+    align-items: center;/*垂直居中*/
+    position: relative;
+    overflow: hidden;/*超出该类的内容进行隐藏，实现图片放大效果*/
+}
+.d .left:hover a {
+    text-decoration: underline;/*鼠标悬停时才会出现下划线*/
+}
+.d .left img {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    width: 100%;
+    height: 1.8rem;
+    transition: transform 0.3s linear;/*过渡动画函数，缩放图片大小*/
+}
+.d .left img:hover {
+   transform: scale(1.05);/*鼠标悬停时图片会放大*/
+}
+.d .left a {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    font-size: 0.16rem;
+    text-align: center;
+    text-decoration: none;/*a标签的下划线属性为不可见*/
+    display: flex;
+    color: black;
+}
+.d .left h2 {
+    position: absolute;
+    top: 82%;
+    left: 0;
+    font-size: 0.12rem;
+    color: black;
+}
+.d .right11,.d1 .right12 {
+    width: 2.8rem;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0.05rem;
+    border-left: 0.01rem solid black;
+
+}
+.d .right11 .item11,.d1 .right12 .item12{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.04rem;
+    position: relative;
+}
+.d .right11 .item11:hover .word a,.d1 .right12 .item12:hover .word a{
+    text-decoration: underline;
+}
+/*二级菜单的图片加文字的部分结构完全相同，所以写在同一类*/
+.d .right11 .item11 .icon,.d1 .right12 .item12 .icon{
+    width: 20%;
+    height: 50%;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+} 
+.d .right11 .item11 .icon img,.d1 .right12 .item12 .icon img{
+    width: 100%;
+    height: auto;
+}
+.d .right11 .item11 .word,.d1 .right12 .item12 .word{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 35%;
+    font-size: 0.12rem;
+}
+.d .right11 .item11 .word a,.d1 .right12 .item12 .word a{
+    top: 10%;
+    position: absolute;
+    font-size: 0.15rem;
+    text-decoration: none;
+    color: black;
+}
+.d .right11 .item11 .word p,.d1 .right12 .item12 .word p{
+    top: 45%;
+    position: absolute;
+    font-size: 0.13rem;
+    color: rgba(20, 30, 40,0.5);
+}
+
+
 @keyframes IMGUP {
     from {
         transform: scale(1);

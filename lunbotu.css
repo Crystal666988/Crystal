@@ -1,6 +1,6 @@
     .lunbotu {
     position: relative;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     width: 10rem;
    }
    .lunbotu img {
@@ -11,13 +11,15 @@
         position: absolute;
         top: 50%;/*令其位于lunbotu类的一半位置*/
         transform: translateY(-50%);
-        background: whitesmoke;
+        background-color:  rgba(20, 30, 40,0.5);
         border: none;
         font-size: 0.24rem;
         padding: 0.1rem 0.2rem;
         cursor: pointer;
-        opacity: 0.5;
+        /* opacity: 0.5; */
         z-index: 5;
+        color: black;
+        border-radius: 10%;
     }
     .prev {
         left: 0.10rem;
@@ -43,19 +45,19 @@
         transform: translate3d(-3rem,0,0) scale(0.8);/* 沿X轴向左平移300像素，Y/Z轴无位移,缩小图片大小，让其实现近大远小的效果 */
         opacity: 1;
         z-index: 1;/*通过控制x轴图片的位移，以及z轴上的展示顺序实现上面的图片覆盖下面的图片部分，让轮播图更好看*/
-        filter: blur(0.05rem);
+        filter: blur(0.02rem);
     }
     .images .item:nth-child(2){
         transform: translate3d(-2rem,0,0) scale(1.05);
         opacity: 1;
         z-index: 2;
-        filter: blur(0.03rem);
+        filter: blur(0.01rem);
     }
     .images .item:nth-child(3){
         transform: translate3d(-1rem,0,0) scale(1.15);
         opacity: 1;
         z-index: 3;
-        filter: blur(0.01rem);
+        filter: blur(0.00rem);
     }
     .images .item:nth-child(4){
         transform: translate3d(-0rem,0,0) scale(1.3);
@@ -66,17 +68,17 @@
         transform: translate3d(1rem,0,0) scale(1.15);
         opacity: 1;
         z-index: 3;
-        filter: blur(0.01rem);
+        filter: blur(0.00rem);
     }
     .images .item:nth-child(6){
         transform: translate3d(2rem,0,0) scale(1.05);
         opacity: 1;
         z-index: 2;
-        filter: blur(0.03rem);
+        filter: blur(0.01rem);
     }
     .images .item:nth-child(7){
         transform: translate3d(3rem,0,0) scale(0.8);
         opacity: 1;
         z-index: 1;
-        filter: blur(0.05rem);
+        filter: blur(0.02rem);
     }
